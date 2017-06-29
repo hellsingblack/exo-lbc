@@ -2,7 +2,6 @@ import { clone } from 'lodash';
 import messages from '../data/messages';
 
 export const FETCH_MESSAGES_SUCCESS = 'FETCH_MESSAGES_SUCCESS';
-export const SAVE_MESSAGES_SUCCESS = 'FETCH_MESSAGES_SUCCESS';
 
 export const fetchMessages = () => dispatch => {
   return dispatch({
@@ -11,9 +10,9 @@ export const fetchMessages = () => dispatch => {
   });
 }
 
-export const SAVE_MESSAGE = 'SAVE_MESSAGE';
+export const SAVE_MESSAGES_SUCCESS = 'SAVE_MESSAGES_SUCCESS';
 
-export const saveMessage = ({message = '', isPrivate = false}) => (dispatch, getState) => {
+export const saveMessage = ({ message = '', isPrivate = false }) => (dispatch, getState) => {
 
   const { messages } = getState().list;
   const newList = clone(messages);

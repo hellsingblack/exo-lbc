@@ -1,7 +1,7 @@
 import {
   FETCH_MESSAGES_SUCCESS,
   SAVE_MESSAGES_SUCCESS,
-} from '../actions/messages';
+} from '../../actions/messages';
 
 const initialState = {
   messages: [],
